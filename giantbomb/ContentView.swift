@@ -12,6 +12,8 @@ struct Video : Decodable, Identifiable {
     var id: Int
     var guid: String
     var name: String
+    var deck: String
+    var hosts: String?
     var publishDate: String
     var premium: Bool
     var lengthSeconds: Int
@@ -61,13 +63,16 @@ struct ContentView: View {
     @ObservedObject var fetchVideos = FetchVideos()
 
     var body: some View {
-        VStack {
+        NavigationView {
             List(fetchVideos.videos.results) { video in
-                HStack(alignment: .top) {
-                    Text(video.premium ? "[P]" : "")
-                    Text(video.name)
+                NavigationLink(destination: VideoView(video: video)) {
+                    HStack(alignment: .top) {
+                        Text(video.premium ? "[P]" : "")
+                        Text(video.name)
+                    }
                 }
             }
+            .navigationBarTitle(Text("Latest Videos"))
         }
     }
 }

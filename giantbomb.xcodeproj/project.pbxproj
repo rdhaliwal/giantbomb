@@ -16,6 +16,7 @@
 		BB0D17832470FAED00BCFB2A /* giantbombTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0D17822470FAED00BCFB2A /* giantbombTests.swift */; };
 		BB0D178E2470FAED00BCFB2A /* giantbombUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0D178D2470FAED00BCFB2A /* giantbombUITests.swift */; };
 		BBA59823247103410077F09B /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA59822247103410077F09B /* Environment.swift */; };
+		BBA5982624714B8F0077F09B /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA5982524714B8F0077F09B /* VideoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		BB0D178F2470FAED00BCFB2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BBA59822247103410077F09B /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		BBA59824247105500077F09B /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
+		BBA5982524714B8F0077F09B /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				BB0D176B2470FAEB00BCFB2A /* AppDelegate.swift */,
 				BB0D176D2470FAEB00BCFB2A /* SceneDelegate.swift */,
 				BB0D176F2470FAEB00BCFB2A /* ContentView.swift */,
+				BBA5982524714B8F0077F09B /* VideoView.swift */,
 				BB0D17712470FAEC00BCFB2A /* Assets.xcassets */,
 				BB0D17762470FAEC00BCFB2A /* LaunchScreen.storyboard */,
 				BB0D17792470FAEC00BCFB2A /* Info.plist */,
@@ -273,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB0D176C2470FAEB00BCFB2A /* AppDelegate.swift in Sources */,
+				BBA5982624714B8F0077F09B /* VideoView.swift in Sources */,
 				BBA59823247103410077F09B /* Environment.swift in Sources */,
 				BB0D176E2470FAEB00BCFB2A /* SceneDelegate.swift in Sources */,
 				BB0D17702470FAEB00BCFB2A /* ContentView.swift in Sources */,
