@@ -15,6 +15,7 @@
 		BB0D17782470FAEC00BCFB2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB0D17762470FAEC00BCFB2A /* LaunchScreen.storyboard */; };
 		BB0D17832470FAED00BCFB2A /* giantbombTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0D17822470FAED00BCFB2A /* giantbombTests.swift */; };
 		BB0D178E2470FAED00BCFB2A /* giantbombUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0D178D2470FAED00BCFB2A /* giantbombUITests.swift */; };
+		BBA59823247103410077F09B /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA59822247103410077F09B /* Environment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,8 @@
 		BB0D17892470FAED00BCFB2A /* giantbombUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = giantbombUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB0D178D2470FAED00BCFB2A /* giantbombUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = giantbombUITests.swift; sourceTree = "<group>"; };
 		BB0D178F2470FAED00BCFB2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BBA59822247103410077F09B /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		BBA59824247105500077F09B /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +82,7 @@
 		BB0D175F2470FAEB00BCFB2A = {
 			isa = PBXGroup;
 			children = (
+				BBA59824247105500077F09B /* Development.xcconfig */,
 				BB0D176A2470FAEB00BCFB2A /* giantbomb */,
 				BB0D17812470FAED00BCFB2A /* giantbombTests */,
 				BB0D178C2470FAED00BCFB2A /* giantbombUITests */,
@@ -106,6 +110,7 @@
 				BB0D17762470FAEC00BCFB2A /* LaunchScreen.storyboard */,
 				BB0D17792470FAEC00BCFB2A /* Info.plist */,
 				BB0D17732470FAEC00BCFB2A /* Preview Content */,
+				BBA59822247103410077F09B /* Environment.swift */,
 			);
 			path = giantbomb;
 			sourceTree = "<group>";
@@ -268,6 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB0D176C2470FAEB00BCFB2A /* AppDelegate.swift in Sources */,
+				BBA59823247103410077F09B /* Environment.swift in Sources */,
 				BB0D176E2470FAEB00BCFB2A /* SceneDelegate.swift in Sources */,
 				BB0D17702470FAEB00BCFB2A /* ContentView.swift in Sources */,
 			);
@@ -318,6 +324,7 @@
 /* Begin XCBuildConfiguration section */
 		BB0D17902470FAED00BCFB2A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BBA59824247105500077F09B /* Development.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
