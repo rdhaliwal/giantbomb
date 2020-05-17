@@ -1,3 +1,8 @@
+# Giant Bomb app
+
+- This app interacts with the Giant Bomb API.
+- This project primarily exists as a venue for me to learn iOS developement and SwiftUI.
+  - If you really want an iOS app to browse Giant Bomb, there are better options out there already on the App Store.
 
 ## Setup
 
