@@ -2,11 +2,7 @@ Development.xcconfig
 gb_video_shows.json
 gb_videos.json
 
-
 # Xcode
-#
-# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
-
 ## Build generated
 build/
 DerivedData/
@@ -20,4 +16,4 @@ DerivedData/
 !default.mode2v3
 *.perspectivev3
 !default.perspectivev3
-giantbomb.xcodeproj/xcuserdata
+xcuserdata/
