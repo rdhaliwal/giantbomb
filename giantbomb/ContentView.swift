@@ -37,7 +37,7 @@ class FetchVideos: ObservableObject {
         ]
         guard let url = thing?.url else { return }
 
-        URLSession.shared.dataTask(with: url) {(data, response, error) in
+        URLSession.shared.dataTask(with: url) {(data, response, urlError) in
             do {
                 if let videosData = data {
                     let decoder = JSONDecoder()
@@ -49,8 +49,8 @@ class FetchVideos: ObservableObject {
                 } else {
                     print("No data")
                 }
-            } catch {
-                print("Error")
+            } catch let decodingError {
+                print("Error \(decodingError)")
             }
         }.resume()
     }
