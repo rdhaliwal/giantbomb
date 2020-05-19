@@ -17,6 +17,9 @@ struct Video : Decodable, Identifiable {
     var publishDate: String
     var premium: Bool
     var lengthSeconds: Int
+    var lowUrl: String
+    var highUrl: String
+    var hdUrl: String
 }
 
 struct Videos : Decodable {
