@@ -1,30 +1,12 @@
 //
-//  ContentView.swift
+//  VideoListView.swift
 //  giantbomb
 //
-//  Created by Randeep Dhaliwal on 17/5/20.
+//  Created by Randeep Dhaliwal on 23/5/20.
 //  Copyright © 2020 Randeep Dhaliwal. All rights reserved.
 //
 
 import SwiftUI
-
-struct Video : Decodable, Identifiable {
-    var id: Int
-    var guid: String
-    var name: String
-    var deck: String
-    var hosts: String?
-    var publishDate: String
-    var premium: Bool
-    var lengthSeconds: Int
-    var lowUrl: String
-    var highUrl: String
-    var hdUrl: String
-}
-
-struct Videos : Decodable {
-    var results: [Video]
-}
 
 class FetchVideos: ObservableObject {
     @Published var videos: Videos
@@ -62,7 +44,7 @@ class FetchVideos: ObservableObject {
 }
 
 
-struct ContentView: View {
+struct VideoListView: View {
     @ObservedObject var fetchVideos = FetchVideos()
 
     var body: some View {
@@ -80,8 +62,9 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct VideoListView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        VideoListView()
     }
 }
+
