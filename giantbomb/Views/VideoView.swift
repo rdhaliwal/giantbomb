@@ -7,19 +7,25 @@
 //
 
 import SwiftUI
+import AVKit
 import AVFoundation
 
 struct VideoView: View {
-    let video: Video
+    @State var video: Video
+
     var body: some View {
         VStack(alignment: .leading) {
-//            Text(video.hdUrl)
-            VideoPlayer(urlString: video.hdUrl)
-//                .frame(width: 100.0, height: 100.0)
+            VideoPlayer(urlPath: $video.lowUrl)
+                .transition(.move(edge: .bottom))
+                .edgesIgnoringSafeArea(.all)
             Text(video.deck)
             Text("Published: \(video.publishDate)")
             Text(video.hosts != nil ? "Cast: \(video.hosts!)" : "")
-        }.padding(.all, 10.0).navigationBarTitle(Text(video.name))
+        }.padding(.all, 10.0)
+        .navigationBarTitle(
+            Text(video.name),
+            displayMode: .inline
+        )
     }
 
 }
@@ -43,41 +49,21 @@ struct VideoView_Previews: PreviewProvider {
     }
 }
 
+struct VideoPlayer: UIViewControllerRepresentable {
+    @Binding var urlPath: String
 
-struct VideoPlayer: UIViewRepresentable {
-    var urlString: String
-
-    func updateUIView(_ uiView: UIView, context: UIViewRepresentableContext<VideoPlayer>) {
+    private var player: AVPlayer {
+        let url = URL(string: "\(urlPath)?api_key=\(Environment.gbApiKey)")!
+        return AVPlayer(url: url)
     }
 
-    func makeUIView(context: Context) -> UIView {
-        return ViewPlayerUIView(
-//            frame: CGRect(x: 100, y: 100, width: 100, height: 100),
-            frame: .zero,
-            urlString: urlString
-        )
-    }
-}
-
-class ViewPlayerUIView: UIView {
-    private let playerLayer = AVPlayerLayer()
-
-    init(frame: CGRect, urlString: String) {
-        super.init(frame: frame)
-
-        let url = URL(string: "\(urlString)?api_key=\(Environment.gbApiKey)")!
-        let player = AVPlayer(url: url)
-        player.play()
-        playerLayer.player = player
-        layer.addSublayer(playerLayer)
+    func updateUIViewController(_ playerController: AVPlayerViewController, context: Context) {
+        playerController.modalPresentationStyle = .fullScreen
+        playerController.player = player
+        playerController.player?.play()
     }
 
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-    }
-
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        playerLayer.frame = bounds
+    func makeUIViewController(context: Context) -> AVPlayerViewController {
+        return AVPlayerViewController()
     }
 }
