@@ -1,4 +1,5 @@
 Development.xcconfig
+Release.xcconfig
 gb_video_shows.json
 gb_videos.json
 

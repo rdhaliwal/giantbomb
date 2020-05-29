@@ -14,6 +14,7 @@
 		BB0D17782470FAEC00BCFB2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB0D17762470FAEC00BCFB2A /* LaunchScreen.storyboard */; };
 		BB0D17832470FAED00BCFB2A /* giantbombTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0D17822470FAED00BCFB2A /* giantbombTests.swift */; };
 		BB0D178E2470FAED00BCFB2A /* giantbombUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0D178D2470FAED00BCFB2A /* giantbombUITests.swift */; };
+		BB47955B248087E800084732 /* Release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = BB47955A248087E800084732 /* Release.xcconfig */; };
 		BB6EE6842478C9EF00274B81 /* VideoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6EE6832478C9EF00274B81 /* VideoService.swift */; };
 		BB6EE6892478CABA00274B81 /* VideoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6EE6882478CABA00274B81 /* VideoListView.swift */; };
 		BB6EE68B2478D02F00274B81 /* VideoServiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6EE68A2478D02F00274B81 /* VideoServiceModel.swift */; };
@@ -52,6 +53,7 @@
 		BB0D17892470FAED00BCFB2A /* giantbombUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = giantbombUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB0D178D2470FAED00BCFB2A /* giantbombUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = giantbombUITests.swift; sourceTree = "<group>"; };
 		BB0D178F2470FAED00BCFB2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB47955A248087E800084732 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		BB6EE6832478C9EF00274B81 /* VideoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoService.swift; sourceTree = "<group>"; };
 		BB6EE6882478CABA00274B81 /* VideoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListView.swift; sourceTree = "<group>"; };
 		BB6EE68A2478D02F00274B81 /* VideoServiceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoServiceModel.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				BB0D17812470FAED00BCFB2A /* giantbombTests */,
 				BB0D178C2470FAED00BCFB2A /* giantbombUITests */,
 				BB0D17692470FAEB00BCFB2A /* Products */,
+				BB47955A248087E800084732 /* Release.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -278,6 +281,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB47955B248087E800084732 /* Release.xcconfig in Resources */,
 				BB0D17782470FAEC00BCFB2A /* LaunchScreen.storyboard in Resources */,
 				BB0D17752470FAEC00BCFB2A /* Preview Assets.xcassets in Resources */,
 				BB0D17722470FAEC00BCFB2A /* Assets.xcassets in Resources */,
@@ -421,6 +425,7 @@
 		};
 		BB0D17912470FAED00BCFB2A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB47955A248087E800084732 /* Release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
