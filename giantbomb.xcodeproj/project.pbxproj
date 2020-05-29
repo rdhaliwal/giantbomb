@@ -40,7 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		BB0D17682470FAEB00BCFB2A /* giantbomb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = giantbomb.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB0D17682470FAEB00BCFB2A /* Giant Bomb TV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Giant Bomb TV.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB0D176B2470FAEB00BCFB2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB0D176D2470FAEB00BCFB2A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		BB0D17712470FAEC00BCFB2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -102,7 +102,7 @@
 		BB0D17692470FAEB00BCFB2A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BB0D17682470FAEB00BCFB2A /* giantbomb.app */,
+				BB0D17682470FAEB00BCFB2A /* Giant Bomb TV.app */,
 				BB0D177E2470FAED00BCFB2A /* giantbombTests.xctest */,
 				BB0D17892470FAED00BCFB2A /* giantbombUITests.xctest */,
 			);
@@ -194,7 +194,7 @@
 			);
 			name = giantbomb;
 			productName = giantbomb;
-			productReference = BB0D17682470FAEB00BCFB2A /* giantbomb.app */;
+			productReference = BB0D17682470FAEB00BCFB2A /* Giant Bomb TV.app */;
 			productType = "com.apple.product-type.application";
 		};
 		BB0D177D2470FAED00BCFB2A /* giantbombTests */ = {
@@ -492,7 +492,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rdhaliwal.giantbomb;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Giant Bomb TV";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -512,7 +512,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rdhaliwal.giantbomb;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Giant Bomb TV";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
