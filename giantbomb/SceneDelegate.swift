@@ -19,6 +19,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
 
+
+        KeychainStore.saveValue(key: "gb_api_key", value: "hello_there")
+        let apiKey = KeychainStore.getValue(key: "gb_api_key")
+        print(apiKey)
+
         // Create the SwiftUI view that provides the window contents.
         let contentView = ContentView()
 
