@@ -49,15 +49,20 @@ struct VideoListView: View {
 
     var body: some View {
         NavigationView {
-            List(fetchVideos.videos.results) { video in
+            // https://medium.com/flawless-app-stories/swiftui-dynamic-list-identifiable-73c56215f9ff
+            List(fetchVideos.videos.results, id: \.id) { video in
                 NavigationLink(destination: VideoView(video: video)) {
-                    HStack(alignment: .top) {
-                        Text(video.premium ? "[P]" : "")
+                    HStack(alignment: .center) {
+                        if video.premium {
+                            Image(systemName: "star.fill")
+                        }
                         Text(video.name)
                     }
                 }
-            }
+            }//.id(UUID())
+
             .navigationBarTitle(Text("Latest Videos"))
+            .navigationViewStyle(StackNavigationViewStyle())
         }
     }
 }
@@ -68,3 +73,5 @@ struct VideoListView_Previews: PreviewProvider {
     }
 }
 
+// Potential way to improve the semantics of conditional views
+// https://stackoverflow.com/a/57685253

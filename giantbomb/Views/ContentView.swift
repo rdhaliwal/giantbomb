@@ -16,7 +16,7 @@ struct ContentView: View {
                     Image(systemName: "tv.fill")
                     Text("Videos")
             }
-            SettingsView()
+            SettingsView(red: 0.4, green: 0.2, blue: 0.1)
                 .tabItem {
                     Image(systemName: "gear")
                     Text("Settings")
