@@ -16,6 +16,8 @@
 		BB0D178E2470FAED00BCFB2A /* giantbombUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0D178D2470FAED00BCFB2A /* giantbombUITests.swift */; };
 		BB0EA9A42480F963004E8903 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0EA9A32480F963004E8903 /* ContentView.swift */; };
 		BB0EA9A62480F9DA004E8903 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0EA9A52480F9DA004E8903 /* SettingsView.swift */; };
+		BB43F81B24B4052400D106BE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB43F81A24B4052400D106BE /* LoginView.swift */; };
+		BB43F81D24B4068000D106BE /* LandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB43F81C24B4068000D106BE /* LandingView.swift */; };
 		BB47955B248087E800084732 /* Release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = BB47955A248087E800084732 /* Release.xcconfig */; };
 		BB6EE6842478C9EF00274B81 /* VideoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6EE6832478C9EF00274B81 /* VideoService.swift */; };
 		BB6EE6892478CABA00274B81 /* VideoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6EE6882478CABA00274B81 /* VideoListView.swift */; };
@@ -57,6 +59,8 @@
 		BB0D178F2470FAED00BCFB2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB0EA9A32480F963004E8903 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BB0EA9A52480F9DA004E8903 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		BB43F81A24B4052400D106BE /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		BB43F81C24B4068000D106BE /* LandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingView.swift; sourceTree = "<group>"; };
 		BB47955A248087E800084732 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		BB6EE6832478C9EF00274B81 /* VideoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoService.swift; sourceTree = "<group>"; };
 		BB6EE6882478CABA00274B81 /* VideoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListView.swift; sourceTree = "<group>"; };
@@ -172,6 +176,8 @@
 				BB6EE6882478CABA00274B81 /* VideoListView.swift */,
 				BB0EA9A32480F963004E8903 /* ContentView.swift */,
 				BB0EA9A52480F9DA004E8903 /* SettingsView.swift */,
+				BB43F81A24B4052400D106BE /* LoginView.swift */,
+				BB43F81C24B4068000D106BE /* LandingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -325,6 +331,8 @@
 				BBA5982624714B8F0077F09B /* VideoView.swift in Sources */,
 				BB6EE68B2478D02F00274B81 /* VideoServiceModel.swift in Sources */,
 				BBA59823247103410077F09B /* Environment.swift in Sources */,
+				BB43F81B24B4052400D106BE /* LoginView.swift in Sources */,
+				BB43F81D24B4068000D106BE /* LandingView.swift in Sources */,
 				BB0D176E2470FAEB00BCFB2A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

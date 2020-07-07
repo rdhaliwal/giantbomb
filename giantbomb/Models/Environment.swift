@@ -68,7 +68,7 @@ class KeychainStore {
         print("Save Success - \(key)")
     }
 
-    static func getValue(key: String) -> String{
+    static func getValue(key: String) -> String? {
         let query: [String: Any] = [
             kSecClass as String: kSecClassGenericPassword,
             kSecReturnAttributes as String: kCFBooleanTrue!,
@@ -82,11 +82,11 @@ class KeychainStore {
 
         if readStatus == errSecItemNotFound {
             print("Get Failed - Not Found \(readStatus)")
-            return "Get Failed - Not Found"
+            return nil
         }
         if readStatus != errSecSuccess {
             print("Get Failed - Read error \(readStatus)")
-            return "Get Failed - Read error"
+            return nil
         }
 
         guard let result = queryResult as? [String : Any],
@@ -94,7 +94,7 @@ class KeychainStore {
             let value = String(data: valueData, encoding: String.Encoding.utf8)
             else {
                 print("Get Failed - Parse error \(readStatus)")
-                return "Get Failed - Parse error"
+                return nil
         }
 
         print("Get Success - \(value)")
