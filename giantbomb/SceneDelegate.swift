@@ -21,8 +21,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
         KeychainStore.saveValue(key: "gb_api_key", value: "hello_there")
-        let apiKey = KeychainStore.getValue(key: "gb_api_key")
-        print(apiKey)
+        var apiKey = KeychainStore.getValue(key: "gb_api_key")
+        print("First Get - \(apiKey)")
+        KeychainStore.updateValue(key: "gb_api_key", value: "hello_there_2")
+        apiKey = KeychainStore.getValue(key: "gb_api_key")
+        print("Second Get - \(apiKey)")
+        KeychainStore.deleteValue(key: "gb_api_key")
+        apiKey = KeychainStore.getValue(key: "gb_api_key")
+        print("Final Get - \(apiKey)")
 
         // Create the SwiftUI view that provides the window contents.
         let contentView = ContentView()

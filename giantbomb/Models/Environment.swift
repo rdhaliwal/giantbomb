@@ -57,15 +57,15 @@ class KeychainStore {
         ]
 
         let writeStatus = SecItemAdd(query as CFDictionary, nil)
-        print(writeStatus)
+
         if writeStatus == errSecDuplicateItem {
-            return print("Already exists in Keychain. Use update instead of save")
+            return print("Save Failed - Duplicate Item")
         }
         if writeStatus != errSecSuccess {
-            return print("Failed to Save")
+            return print("Save Failed - write error \(writeStatus)")
         }
 
-        print("saveValue success - \(key)")
+        print("Save Success - \(key)")
     }
 
     static func getValue(key: String) -> String{
@@ -80,43 +80,61 @@ class KeychainStore {
         var queryResult: AnyObject?
         let readStatus = SecItemCopyMatching(query as CFDictionary, &queryResult)
 
-        print(readStatus)
-
+        if readStatus == errSecItemNotFound {
+            print("Get Failed - Not Found \(readStatus)")
+            return "Get Failed - Not Found"
+        }
         if readStatus != errSecSuccess {
-            print("Failed to Read")
-            return "Nope - Read error"
+            print("Get Failed - Read error \(readStatus)")
+            return "Get Failed - Read error"
         }
 
         guard let result = queryResult as? [String : Any],
             let valueData = result[kSecValueData as String] as? Data,
             let value = String(data: valueData, encoding: String.Encoding.utf8)
-            else { return "Nope - Parse error" }
+            else {
+                print("Get Failed - Parse error \(readStatus)")
+                return "Get Failed - Parse error"
+        }
 
-        print("getValue success - \(value)")
+        print("Get Success - \(value)")
         return value
     }
 
-    /*
-    static func updateValue(key: String, value: String) {
+    static func deleteValue(key: String) {
         let query: [String: Any] = [
             kSecClass as String: kSecClassGenericPassword,
             kSecReturnAttributes as String: kCFBooleanTrue!,
             kSecReturnData as String: kCFBooleanTrue!,
             kSecAttrService as String: service,
             kSecAttrAccount as String: key,
+        ]
+
+        let deleteStatus = SecItemDelete(query as CFDictionary)
+
+        if !(deleteStatus == errSecSuccess || deleteStatus == errSecItemNotFound) {
+            return print("Delete Failed \(deleteStatus)")
+        }
+
+        print("Delete Success")
+    }
+
+    static func updateValue(key: String, value: String) {
+        let query: [String: Any] = [
+            kSecClass as String: kSecClassGenericPassword,
+            kSecAttrService as String: service,
+            kSecAttrAccount as String: key,
+        ]
+        let updateAttributes: [String: Any] = [
             kSecValueData as String: value.data(using: String.Encoding.utf8)!
         ]
 
-        let writeStatus = SecItemAdd(query as CFDictionary, nil)
-        print(writeStatus)
-        if writeStatus == errSecDuplicateItem {
-            return print("Already exists in Keychain. Use update instead of save")
-        }
-        if writeStatus != errSecSuccess {
-            return print("Failed to Save")
+        let updateStatus = SecItemUpdate(query as CFDictionary, updateAttributes as CFDictionary)
+
+        if updateStatus != errSecSuccess {
+            return print("Update Failed - write error \(updateStatus)")
         }
 
-        print("saveValue success - \(key)")
+        print("Update Success - \(key)")
     }
- */
 }
