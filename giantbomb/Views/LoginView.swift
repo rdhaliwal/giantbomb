@@ -10,7 +10,14 @@ import SwiftUI
 
 struct LoginView: View {
     var body: some View {
-        Text("Login Screen")
+        VStack {
+            Text("Login Screen")
+            Button(action: {
+                KeychainStore.saveValue(key: Environment.gbApiKeyIdentifier, value: "hello_there")
+            }, label: {
+                Text("Click me to save API Key")
+            })
+        }
     }
 }
 

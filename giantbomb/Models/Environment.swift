@@ -3,6 +3,8 @@
 import Foundation
 
 public enum Environment {
+    static let gbApiKeyIdentifier = "gb_api_key"
+
     // MARK: - Keys
     enum Keys {
         enum Plist {

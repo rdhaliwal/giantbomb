@@ -12,7 +12,7 @@ struct LandingView: View {
     var apiKey: String?
 
     init() {
-        apiKey = KeychainStore.getValue(key: "gb_api_key")
+        apiKey = KeychainStore.getValue(key: Environment.gbApiKeyIdentifier)
     }
 
     var body: some View {
