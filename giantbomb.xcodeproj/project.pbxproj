@@ -18,7 +18,6 @@
 		BB0EA9A62480F9DA004E8903 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0EA9A52480F9DA004E8903 /* SettingsView.swift */; };
 		BB43F81B24B4052400D106BE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB43F81A24B4052400D106BE /* LoginView.swift */; };
 		BB43F81D24B4068000D106BE /* LandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB43F81C24B4068000D106BE /* LandingView.swift */; };
-		BB47955B248087E800084732 /* Release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = BB47955A248087E800084732 /* Release.xcconfig */; };
 		BB6EE6842478C9EF00274B81 /* VideoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6EE6832478C9EF00274B81 /* VideoService.swift */; };
 		BB6EE6892478CABA00274B81 /* VideoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6EE6882478CABA00274B81 /* VideoListView.swift */; };
 		BB6EE68B2478D02F00274B81 /* VideoServiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6EE68A2478D02F00274B81 /* VideoServiceModel.swift */; };
@@ -254,7 +253,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1140;
-				LastUpgradeCheck = 1140;
+				LastUpgradeCheck = 1150;
 				ORGANIZATIONNAME = "Randeep Dhaliwal";
 				TargetAttributes = {
 					BB0D17672470FAEB00BCFB2A = {
@@ -295,7 +294,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB47955B248087E800084732 /* Release.xcconfig in Resources */,
 				BB0D17782470FAEC00BCFB2A /* LaunchScreen.storyboard in Resources */,
 				BB0D17752470FAEC00BCFB2A /* Preview Assets.xcassets in Resources */,
 				BB0D17722470FAEC00BCFB2A /* Assets.xcassets in Resources */,
