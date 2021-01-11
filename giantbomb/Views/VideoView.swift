@@ -43,16 +43,18 @@ struct VideoView_Previews: PreviewProvider {
             lengthSeconds: 300,
             lowUrl :"https://static-giantbombvideo.cbsistatic.com/vr/2020/05/16/328400/vf_CCC_wreckfest_1800.mp4",
             highUrl :"https://static-giantbombvideo.cbsistatic.com/vr/2020/05/16/328400/vf_CCC_wreckfest_3200.mp4",
-            hdUrl :"https://static-giantbombvideo.cbsistatic.com/vr/2020/05/16/328400/vf_CCC_wreckfest_4000.mp4"
+            hdUrl :"https://static-giantbombvideo.cbsistatic.com/vr/2020/05/16/328400/vf_CCC_wreckfest_4000.mp4",
+            image: VideoCoverImage()
         )
         return VideoView(video: dummyVideo)
     }
 }
 
 struct VideoPlayer: UIViewControllerRepresentable {
-    @Binding var urlPath: String
+    @Binding var urlPath: String?
 
     private var player: AVPlayer {
+        guard let urlPath = urlPath else { return AVPlayer() }
         let url = URL(string: "\(urlPath)?api_key=\(Environment.gbApiKey)")!
         return AVPlayer(url: url)
     }

@@ -9,9 +9,13 @@
 import SwiftUI
 
 struct LoginView: View {
+    @State var thing: String
+
     var body: some View {
         VStack {
             Text("Login Screen")
+            TextField("Thing", text: $thing)
+
             Button(action: {
                 KeychainStore.saveValue(key: Environment.gbApiKeyIdentifier, value: "hello_there")
             }, label: {
@@ -23,6 +27,6 @@ struct LoginView: View {
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView()
+        LoginView(thing: "")
     }
 }

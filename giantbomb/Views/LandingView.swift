@@ -12,7 +12,10 @@ struct LandingView: View {
     var apiKey: String?
 
     init() {
+//        KeychainStore.deleteValue(key: Environment.gbApiKeyIdentifier)
         apiKey = KeychainStore.getValue(key: Environment.gbApiKeyIdentifier)
+        let videoService = VideoService()
+        videoService.getVideoShows()
     }
 
     var body: some View {
@@ -20,7 +23,7 @@ struct LandingView: View {
             if apiKey != nil {
                 ContentView()
             } else {
-                LoginView()
+                LoginView(thing: "")
             }
         }
     }

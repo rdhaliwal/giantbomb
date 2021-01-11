@@ -8,49 +8,32 @@
 
 import SwiftUI
 
+/*
 class FetchVideos: ObservableObject {
     @Published var videos: Videos
 
     init() {
+        let videoService = VideoService()
         self.videos = Videos(results: [] as [Video])
-
-        var thing = URLComponents(string: Environment.gbApiUrl)
-        let path = "/api/videos"
-        thing?.path = path
-        thing?.queryItems = [
-            URLQueryItem(name: "api_key", value: Environment.gbApiKey),
-            URLQueryItem(name: "sort", value: "publish_date:desc"),
-            URLQueryItem(name: "format", value: "json")
-        ]
-        guard let url = thing?.url else { return }
-
-        URLSession.shared.dataTask(with: url) {(data, response, urlError) in
-            do {
-                if let videosData = data {
-                    let decoder = JSONDecoder()
-                    decoder.keyDecodingStrategy = .convertFromSnakeCase
-                    let decodedData = try decoder.decode(Videos.self, from: videosData)
-                    DispatchQueue.main.async {
-                        self.videos = decodedData
-                    }
-                } else {
-                    print("No data")
-                }
-            } catch let decodingError {
-                print("Error \(decodingError)")
-            }
-        }.resume()
+        videoService.getVideoShows()
     }
 }
+*/
 
 
 struct VideoListView: View {
-    @ObservedObject var fetchVideos = FetchVideos()
+    @ObservedObject var videos: [Videos]
+    let videoService: VideoService
+
+    init() {
+        videoService = VideoService()
+        videos = videoService.getVideos()
+    }
 
     var body: some View {
         NavigationView {
             // https://medium.com/flawless-app-stories/swiftui-dynamic-list-identifiable-73c56215f9ff
-            List(fetchVideos.videos.results, id: \.id) { video in
+            List(videos, id: \.id) { video in
                 NavigationLink(destination: VideoView(video: video)) {
                     HStack(alignment: .center) {
                         if video.premium {
